@@ -5,37 +5,55 @@ function Footer() {
     <footer style={{
       backgroundColor: '#111',
       color: '#00aaff',
-      padding: '7rem 4rem 4rem',
+      padding: '7rem 4vw 4rem',
       fontFamily: 'Orbitron, sans-serif',
-      marginTop: '20rem',
+      marginTop: '10rem',
       display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'flex-start',
-      gap: '5rem'
+      flexDirection: 'column',
+      gap: '3rem'
     }}>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '3rem',
+        '@media (min-width: 768px)': {
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          gap: '5rem'
+        }
+      }}>
+        <div 
+          style={{ cursor: 'pointer' }}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <img src="/blue_logo.png" alt="Logo" 
+          style={{ 
+            width: 'clamp(120px, 28vw, 220px)', 
+            height: 'auto',
+            objectFit: 'contain'
+            }} />
+        </div>
 
-<div 
-        style={{ cursor: 'pointer' }}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      >
-        <img src="/blue_logo.png" alt="Logo" 
-        style={{ 
-          width: '28vw', 
-          height: '6vh' 
-          }} />
-      </div>
-
-
-      <div style={{ flex: 2 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem',fontSize: '1.7rem', lineHeight: 1.7 }}>
+        <div style={{
+          flex: 2,
+          display: 'flex',
+          flexWrap: 'wrap',
+          width: '100%',
+          maxWidth: '600px',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          gap: '3rem'
+        }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem',fontSize: '1.7rem', lineHeight: 1.7, flex: '1 1 200px' }}>
             <a href="#top" style={{ color: '#bbb', textDecoration: 'none' }}>Home</a>
             <a href="#character-cards" style={{ color: '#bbb', textDecoration: 'none' }}>Character Cards</a>
             <a href="#timeline-container" style={{ color: '#bbb', textDecoration: 'none' }}>Timeline</a>
             <a href="#trivia-heading" style={{ color: '#bbb', textDecoration: 'none' }}>Trivia</a>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginRight: '6rem', marginTop: '3rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginRight: '6rem', marginTop: '3rem', flex: '1 1 300px', flexWrap: 'wrap', width: '100%', maxWidth: '350px' }}>
             <div style={{ display: 'flex', gap: '1.5rem',flexDirection: 'column' }}>
               <a
                 href="mailto:33105653@student.uwl.ac.uk"
@@ -106,13 +124,12 @@ function Footer() {
             </div>
           </div>
         </div>
-
-        <div style={{ borderTop: '2px solid #00aaff', paddingTop: '1rem', color: '#bbb', fontSize: '0.8rem', marginTop: '2rem',display: 'flex', flexDirection: 'row', gap: '5rem' }}>
-          <p>© 2025 SEGAverse Explorer | All Rights Reserved</p>
-          <p>Crafted with passion for the SEGA Hackathon</p>
-        </div>
       </div>
-      
+
+      <div style={{ borderTop: '2px solid #00aaff', paddingTop: '1rem', color: '#bbb', fontSize: '0.8rem', marginTop: '2rem',display: 'flex', flexDirection: 'row', gap: '5rem', flexWrap: 'wrap' }}>
+        <p>© 2025 SEGAverse Explorer | All Rights Reserved</p>
+        <p>Crafted with passion for the SEGA Hackathon</p>
+      </div>
     </footer>
   );
 }
