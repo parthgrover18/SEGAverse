@@ -108,7 +108,7 @@ function CharacterCards() {
               maxWidth: '20rem',
               boxSizing: 'border-box',
               height: '28rem',
-              overflow: 'visible',
+              overflow: 'hidden',
             }}>
               <div style={{
                 position: 'relative',
@@ -123,7 +123,7 @@ function CharacterCards() {
                 ? 'rotateY(0deg) scale(1.07)' 
                 : 'rotateY(0deg) scale(1)',
               borderRadius: '16px',
-              overflow: 'visible',
+              overflow: 'hidden',
               }} onClick={() => {
                 if (flippedIndex === i) {
                   setFlippedIndex(null);
@@ -145,8 +145,10 @@ function CharacterCards() {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
+                  height: '100%',
+                  overflowY: 'auto',
+                  paddingBottom: '1rem',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
-                  overflow: 'hidden',
                 }}>
                   <div style={{ height: '100%' }}>
                     <CardsModel modelPath={char.path}/>
@@ -178,6 +180,11 @@ function CharacterCards() {
                   background: '#1a1a1a',
                   borderRadius: '16px',
                   display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  height: '100%',
+                  overflowY: 'auto',
+                  paddingBottom: '1rem',
                   justifyContent: 'center',
                   alignItems: 'center',
                   color: '#00aaff',
@@ -185,7 +192,6 @@ function CharacterCards() {
                   fontFamily: 'Orbitron, sans-serif',
                   transform: 'rotateY(180deg)',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
-                  overflow: 'hidden',
                 }}>
                   <div>
                     <h3>{char.name}</h3>
