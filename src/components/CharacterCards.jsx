@@ -113,7 +113,7 @@ function CharacterCards() {
               <div style={{
                 position: 'relative',
                 width: '100%',
-                minHeight: '100%',
+                height: 'auto',
                 transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s',
                 transformStyle: 'preserve-3d',
               transform: flippedIndex === i 
@@ -133,7 +133,7 @@ function CharacterCards() {
                 <div style={{
                   position: 'relative',
                   width: '100%',
-                  minHeight: '100%',
+                  height: 'auto',
                   backfaceVisibility: 'hidden',
                   background: 'linear-gradient(145deg, #1a1a1a, #0a0a0a)',
                   borderRadius: '16px',
@@ -172,7 +172,7 @@ function CharacterCards() {
                 <div style={{
                   position: 'relative',
                   width: '100%',
-                  minHeight: '100%',
+                  height: 'auto',
                   backfaceVisibility: 'hidden',
                   background: '#1a1a1a',
                   borderRadius: '16px',
