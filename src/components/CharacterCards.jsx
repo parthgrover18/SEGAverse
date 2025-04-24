@@ -92,7 +92,7 @@ function CharacterCards() {
           maxWidth: '1200px',
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
           columnGap: '2rem',
           justifyItems: 'center',
           padding: '2rem',
