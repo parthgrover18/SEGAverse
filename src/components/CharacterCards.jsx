@@ -18,7 +18,6 @@ function CharacterCards() {
   };
 
   const characters = [
-    { name: 'Tails', image: 'https://via.placeholder.com/150', description: 'Sonic’s loyal sidekick and a tech genius.', game: 'Sonic the Hedgehog 2', path: './CardsModel/tails.glb', funFact: 'Tails can fly using his twin tails, allowing him to soar through the skies and help Sonic in his adventures!' },
     { name: 'Shadow', image: 'https://via.placeholder.com/150', description: 'The ultimate lifeform, dark and mysterious.', game: 'Sonic Adventure 2', path: './CardsModel/shadow.glb', funFact: 'Shadow was created by Professor Gerald Robotnik, and he possesses incredible speed and chaos powers that make him a formidable opponent.' },
     { name: 'Knuckles', image: 'https://via.placeholder.com/150', description: 'Guardian of the Master Emerald with brute strength.', game: 'Sonic & Knuckles', path: './CardsModel/knuckles.glb', funFact: 'Knuckles is known for his strength and determination, always ready to protect the Master Emerald from any threat that comes its way!' },
     { name: 'Amy', image: 'https://via.placeholder.com/150', description: 'Cheerful and determined, with a huge hammer.', game: 'Sonic CD', path: './CardsModel/amy.glb', funFact: 'Amy has a crush on Sonic and is never afraid to show her feelings, often using her powerful hammer to defend her friends!' },
