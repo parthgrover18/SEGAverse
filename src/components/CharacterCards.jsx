@@ -88,31 +88,29 @@ function CharacterCards() {
             Character Cards
       </h1>
       <div className="character-card-wrapper">
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          columnGap: '2rem',
-          justifyItems: 'center',
-          padding: '2rem',
-          alignItems: 'start',
-          alignContent: 'start',
-          textAlign: 'center'
-        }}>
+        <div style={{maxWidth: '1200px', 
+          margin: '0 auto', 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+          rowGap: '6rem', 
+          columnGap: '2rem', 
+          justifyItems: 'center', 
+          padding: '2rem', 
+          placeItems: 'center', 
+          textAlign: 'center' 
+          }}>
         {displayedCharacters.map((char, i) => {
           return (
             <div ref={addToCardRefs} className="character-card" key={i} 
             style={{
               perspective: '1000px',
               width: '20rem',
-              position: 'relative',
+              height: 'auto',
             }}>
               <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
+                position: 'relative',
+                width: '100%',
+                minHeight: '100%',
                 transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s',
                 transformStyle: 'preserve-3d',
               transform: flippedIndex === i 
@@ -130,9 +128,9 @@ function CharacterCards() {
                 }
               }} onMouseEnter={() => setHoveredIndex(i)} onMouseLeave={() => setHoveredIndex(null)}>
                 <div style={{
-                  position: 'relative',
+                  position: 'absolute',
                   width: '100%',
-                  height: 'auto',
+                  minHeight: '100%',
                   backfaceVisibility: 'hidden',
                   background: 'linear-gradient(145deg, #1a1a1a, #0a0a0a)',
                   borderRadius: '16px',
@@ -149,12 +147,12 @@ function CharacterCards() {
                   <div style={{ height: '100%' }}>
                     <CardsModel modelPath={char.path}/>
                   </div>
-                  <div style={{marginBottom:'1rem'}}>
+                  <div style={{marginBottom:'2rem'}}>
                     <h3 style={{ fontSize: '1.2rem', color: '#00aaff', margin: '0.5rem 0' }}>{char.name}</h3>
                     <p style={{ fontSize: '1rem', color: '#bbb' }}>{char.description}</p>
                   </div>
                   <div style={{
-                    margin: '0 2rem 1.5rem',
+                    margin: '0 3rem 3rem',
                     padding: '0.5rem 0',
                     background: '#00aaff',
                     color: '#000',
@@ -169,9 +167,9 @@ function CharacterCards() {
                   </div>
                 </div>
                 <div style={{
-                  position: 'relative',
+                  position: 'absolute',
                   width: '100%',
-                  height: 'auto',
+                  minHeight: '100%',
                   backfaceVisibility: 'hidden',
                   background: '#1a1a1a',
                   borderRadius: '16px',
