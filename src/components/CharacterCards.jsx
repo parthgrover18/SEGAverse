@@ -105,7 +105,7 @@ function CharacterCards() {
             style={{
               perspective: '1000px',
               width: '20rem',
-              height: '27rem',
+              height: '28rem',
               overflow: 'visible',
             }}>
               <div style={{
