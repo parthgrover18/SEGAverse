@@ -105,12 +105,12 @@ function CharacterCards() {
             style={{
               perspective: '1000px',
               width: '20rem',
-              height: 'auto',
+              height: '28rem',
+              overflow: 'visible',
             }}>
               <div style={{
                 position: 'relative',
                 width: '100%',
-                minHeight: '100%',
                 height: '100%',
                 transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s',
                 transformStyle: 'preserve-3d',
@@ -129,14 +129,13 @@ function CharacterCards() {
                 }
               }} onMouseEnter={() => setHoveredIndex(i)} onMouseLeave={() => setHoveredIndex(null)}>
                 <div style={{
-                  position: 'relative',
-                  minHeight: '100%',
-                  boxSizing: 'border-box',
+                  position: 'absolute',
                   width: '100%',
+                  height: '100%',
                   backfaceVisibility: 'hidden',
                   background: 'linear-gradient(145deg, #1a1a1a, #0a0a0a)',
                   borderRadius: '16px',
-                  padding: 'clamp(1rem, 2vw, 2rem) 1rem 0',
+                  padding: '2rem 1rem 0',
                   textAlign: 'center',
                   fontFamily: 'Orbitron, sans-serif',
                   fontSize: '0.8rem',
@@ -145,19 +144,19 @@ function CharacterCards() {
                   justifyContent: 'space-between',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
                 }}>
-                  <div style={{ minHeight: '100%' }}>
+                  <div style={{ height: '100%' }}>
                     <CardsModel modelPath={char.path}/>
                   </div>
-                  <div style={{marginBottom:'clamp(1rem, 2vw, 2rem)'}}>
-                    <h3 style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: '#00aaff', margin: '0.5em 0' }}>{char.name}</h3>
-                    <p style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1rem)', color: '#bbb', margin: '0 1em' }}>{char.description}</p>
+                  <div style={{marginBottom:'2rem'}}>
+                    <h3 style={{ fontSize: '1.2rem', color: '#00aaff', margin: '0.5rem 0' }}>{char.name}</h3>
+                    <p style={{ fontSize: '1rem', color: '#bbb' }}>{char.description}</p>
                   </div>
                   <div style={{
                     margin: '0 3rem 3rem',
-                    padding: '0.5em 0',
+                    padding: '0.5rem 0',
                     background: '#00aaff',
                     color: '#000',
-                    fontSize: 'clamp(0.6rem, 1vw, 0.7rem)',
+                    fontSize: '0.7rem',
                     fontWeight: 'bold',
                     borderRadius: '20px',
                     boxShadow: '0 0 10px #00aaff66',
@@ -168,10 +167,9 @@ function CharacterCards() {
                   </div>
                 </div>
                 <div style={{
-                  position: 'relative',
-                  minHeight: '100%',
-                  boxSizing: 'border-box',
+                  position: 'absolute',
                   width: '100%',
+                  height: '100%',
                   backfaceVisibility: 'hidden',
                   background: '#1a1a1a',
                   borderRadius: '16px',
@@ -179,11 +177,10 @@ function CharacterCards() {
                   justifyContent: 'center',
                   alignItems: 'center',
                   color: '#00aaff',
-                  fontSize: 'clamp(1rem, 2vw, 1.2rem)',
+                  fontSize: '1.2rem',
                   fontFamily: 'Orbitron, sans-serif',
                   transform: 'rotateY(180deg)',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
-                  padding: '1em'
                 }}>
                   <div>
                     <h3>{char.name}</h3>
