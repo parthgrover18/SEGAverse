@@ -104,7 +104,9 @@ function CharacterCards() {
             <div ref={addToCardRefs} className="character-card" key={i} 
             style={{
               perspective: '1000px',
-              width: '20rem',
+              width: '100%',
+              maxWidth: '20rem',
+              boxSizing: 'border-box',
               height: '28rem',
               overflow: 'visible',
             }}>
@@ -114,6 +116,7 @@ function CharacterCards() {
                 height: '100%',
                 transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s',
                 transformStyle: 'preserve-3d',
+                boxSizing: 'border-box',
               transform: flippedIndex === i 
                 ? 'rotateY(180deg)' 
                 : hoveredIndex === i 
@@ -143,6 +146,7 @@ function CharacterCards() {
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
+                  overflow: 'hidden',
                 }}>
                   <div style={{ height: '100%' }}>
                     <CardsModel modelPath={char.path}/>
@@ -181,6 +185,7 @@ function CharacterCards() {
                   fontFamily: 'Orbitron, sans-serif',
                   transform: 'rotateY(180deg)',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
+                  overflow: 'hidden',
                 }}>
                   <div>
                     <h3>{char.name}</h3>
