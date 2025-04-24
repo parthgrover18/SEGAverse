@@ -37,15 +37,11 @@ function Navbar() {
         style={{ cursor: 'pointer' }}
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
-        <img
-          src="/logo.png"
-          alt="Logo"
-          style={{
-            width: 'clamp(100px, 23vw, 180px)',
-            // height: 'clamp(30px, 5vh, 60px)',
-            objectFit: 'contain'
-          }}
-        />
+        <img src="/logo.png" alt="Logo" 
+        style={{ 
+          width: '23vw', 
+          height: '5vh' 
+          }} />
       </div>
       {isMobile && (
         <button
