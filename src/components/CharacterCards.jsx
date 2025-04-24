@@ -151,8 +151,18 @@ function CharacterCards() {
                   overflow: 'auto',
                   flex: 1,
                   minHeight: 0,
+                  maxHeight: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}>
-                  <div style={{ height: '100%' }}>
+                  <div style={{
+                    height: '100%',
+                    overflow: 'auto',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    paddingBottom: '1rem',
+                  }}>
                     <CardsModel modelPath={char.path}/>
                   </div>
                   <div style={{marginBottom:'2rem'}}>
@@ -193,8 +203,18 @@ function CharacterCards() {
                   flex: 1,
                   minHeight: 0,
                   padding: '1rem',
+                  maxHeight: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}>
-                  <div style={{height: '100%'}}>
+                  <div style={{
+                    height: '100%',
+                    overflow: 'auto',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    paddingBottom: '1rem',
+                  }}>
                     <h3>{char.name}</h3>
                     <p style={{
                         margin: '0 1.5rem',
