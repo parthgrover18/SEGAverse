@@ -36,25 +36,25 @@ const BootUp = ({ onComplete }) => {
       zIndex: 9999,
       color: '#00aaff',
       fontFamily: 'monospace',
-      fontSize: '1.2rem',
+      fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
       padding: '2rem',
-      textAlign: 'center'
+      textAlign: 'center',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
     }}>
       <div style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
+        maxWidth: '90%',
+        width: '600px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         color: '#00aaff',
         fontFamily: 'monospace',
-        fontSize: '1.2rem',
-        padding: '2rem',
+        fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
         textAlign: 'center',
       }}>
-        <div style={{ minHeight: '1.2em', fontWeight: 'bold',fontSize: '1.5rem' }}>{text}</div>
+        <div style={{ minHeight: '1.2em', fontWeight: 'bold', fontSize: '1.5rem' }}>{text}</div>
         <div style={{ marginTop: '4rem', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           {showLoader && <RingLoader color="#00aaff" size={60} />}
         </div>
