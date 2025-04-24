@@ -105,13 +105,12 @@ function CharacterCards() {
             style={{
               perspective: '1000px',
               width: '20rem',
-              height: '28rem',
-              overflow: 'visible',
+              height: 'auto',
             }}>
               <div style={{
                 position: 'relative',
                 width: '100%',
-                height: '100%',
+                minHeight: '100%',
                 transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s',
                 transformStyle: 'preserve-3d',
               transform: flippedIndex === i 
@@ -131,7 +130,7 @@ function CharacterCards() {
                 <div style={{
                   position: 'absolute',
                   width: '100%',
-                  height: '100%',
+                  minHeight: '100%',
                   backfaceVisibility: 'hidden',
                   background: 'linear-gradient(145deg, #1a1a1a, #0a0a0a)',
                   borderRadius: '16px',
@@ -143,6 +142,7 @@ function CharacterCards() {
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
+                  boxSizing: 'border-box',
                 }}>
                   <div style={{ height: '100%' }}>
                     <CardsModel modelPath={char.path}/>
@@ -169,7 +169,7 @@ function CharacterCards() {
                 <div style={{
                   position: 'absolute',
                   width: '100%',
-                  height: '100%',
+                  minHeight: '100%',
                   backfaceVisibility: 'hidden',
                   background: '#1a1a1a',
                   borderRadius: '16px',
@@ -181,6 +181,7 @@ function CharacterCards() {
                   fontFamily: 'Orbitron, sans-serif',
                   transform: 'rotateY(180deg)',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
+                  boxSizing: 'border-box',
                 }}>
                   <div>
                     <h3>{char.name}</h3>
