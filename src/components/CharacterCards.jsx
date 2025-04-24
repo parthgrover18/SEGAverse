@@ -106,7 +106,7 @@ function CharacterCards() {
             style={{
               perspective: '1000px',
               width: '20rem',
-              // height: 'auto',
+              height: 'auto',
               display: 'flex',
               flexDirection: 'column',
             }}>
