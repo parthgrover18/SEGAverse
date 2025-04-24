@@ -11,29 +11,27 @@ function Model({ modelPath }) {
   useEffect(() => {
     const box = new THREE.Box3().setFromObject(scene);
     const size = box.getSize(new THREE.Vector3());
-
-    const maxDim = Math.max(size.x, size.y, size.z);
-    const uniformScale = 1.5 / maxDim;
+    const targetHeight = 1.5;
+    const uniformScale = targetHeight / size.y;
 
     setScale(uniformScale);
-
-    const center = box.getCenter(new THREE.Vector3());
-    scene.position.sub(center.multiplyScalar(uniformScale));
-    scene.position.y += 0.75; // Adjust vertically if needed
-
-    // Custom tweaks for specific models
+    scene.position.y = (-box.min.y * uniformScale)-0.8;
     if (modelPath.includes("tails")) {
       scene.position.y += 1.7;
     }
+
     if (modelPath.includes("infinite")) {
       scene.position.y -= 13.5;
     }
+
     if (modelPath.includes("jetHawk")) {
       scene.position.y += 0.97;
     }
+
     if (modelPath.includes("e123Omega")) {
       scene.position.y += 5;
     }
+
   }, [scene, modelPath]);
 
   return <primitive ref={modelRef} object={scene} scale={scale} />;
