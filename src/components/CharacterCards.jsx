@@ -95,7 +95,7 @@ function CharacterCards() {
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           columnGap: '2rem',
           justifyItems: 'center',
-          padding: '2rem',
+          // padding: '2rem',
           alignItems: 'start',
           alignContent: 'start',
           textAlign: 'center'
