@@ -150,12 +150,12 @@ function CharacterCards() {
                   <div style={{ height: '100%' }}>
                     <CardsModel modelPath={char.path}/>
                   </div>
-                  <div style={{marginBottom:'2rem'}}>
+                  <div style={{marginBottom:'1rem'}}>
                     <h3 style={{ fontSize: '1.2rem', color: '#00aaff', margin: '0.5rem 0' }}>{char.name}</h3>
                     <p style={{ fontSize: '1rem', color: '#bbb' }}>{char.description}</p>
                   </div>
                   <div style={{
-                    margin: '0 3rem 3rem',
+                    margin: '0 2rem 1.5rem',
                     padding: '0.5rem 0',
                     background: '#00aaff',
                     color: '#000',
