@@ -22,19 +22,17 @@ function Model({ modelPath }) {
     scene.position.y += 0.75; // Adjust vertically if needed
 
     // Custom tweaks for specific models
-    if (typeof modelPath === 'string') {
-      if (modelPath.includes("tails")) {
-        scene.position.y += 1.7;
-      }
-      if (modelPath.includes("infinite")) {
-        scene.position.y -= 13.5;
-      }
-      if (modelPath.includes("jetHawk")) {
-        scene.position.y += 0.97;
-      }
-      if (modelPath.includes("e123Omega")) {
-        scene.position.y += 5;
-      }
+    if (modelPath.includes("tails")) {
+      scene.position.y += 1.7;
+    }
+    if (modelPath.includes("infinite")) {
+      scene.position.y -= 13.5;
+    }
+    if (modelPath.includes("jetHawk")) {
+      scene.position.y += 0.97;
+    }
+    if (modelPath.includes("e123Omega")) {
+      scene.position.y += 5;
     }
   }, [scene, modelPath]);
 
