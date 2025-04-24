@@ -103,7 +103,7 @@ function CharacterCards() {
           return (
             <div ref={addToCardRefs} className="character-card" key={i} 
             style={{
-              perspective: '000px',
+              perspective: '1000px',
               width: '20rem',
               height: '28rem',
               overflow: 'visible',
