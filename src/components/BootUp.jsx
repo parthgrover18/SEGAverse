@@ -32,6 +32,7 @@ const BootUp = ({ onComplete }) => {
       left: 0,
       width: '100vw',
       height: '100vh',
+      margin: 
       backgroundColor: '#000',
       zIndex: 9999,
       color: '#00aaff',
