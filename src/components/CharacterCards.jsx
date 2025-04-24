@@ -106,6 +106,8 @@ function CharacterCards() {
               perspective: '1000px',
               width: '20rem',
               height: 'auto',
+              display: 'flex',
+              flexDirection: 'column',
             }}>
               <div style={{
                 position: 'relative',
@@ -128,7 +130,7 @@ function CharacterCards() {
                 }
               }} onMouseEnter={() => setHoveredIndex(i)} onMouseLeave={() => setHoveredIndex(null)}>
                 <div style={{
-                  position: 'absolute',
+                  position: 'relative',
                   width: '100%',
                   minHeight: '100%',
                   backfaceVisibility: 'hidden',
@@ -167,7 +169,7 @@ function CharacterCards() {
                   </div>
                 </div>
                 <div style={{
-                  position: 'absolute',
+                  position: 'relative',
                   width: '100%',
                   minHeight: '100%',
                   backfaceVisibility: 'hidden',
