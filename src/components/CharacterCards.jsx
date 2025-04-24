@@ -108,7 +108,7 @@ function CharacterCards() {
               maxWidth: '20rem',
               boxSizing: 'border-box',
               height: '28rem',
-              overflow: 'visible',
+              overflow: 'hidden',
             }}>
               <div style={{
                 position: 'relative',
@@ -117,13 +117,15 @@ function CharacterCards() {
                 transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s',
                 transformStyle: 'preserve-3d',
                 boxSizing: 'border-box',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column',
               transform: flippedIndex === i 
                 ? 'rotateY(180deg)' 
                 : hoveredIndex === i 
                 ? 'rotateY(0deg) scale(1.07)' 
                 : 'rotateY(0deg) scale(1)',
               borderRadius: '16px',
-              overflow: 'visible',
               }} onClick={() => {
                 if (flippedIndex === i) {
                   setFlippedIndex(null);
@@ -138,7 +140,7 @@ function CharacterCards() {
                   backfaceVisibility: 'hidden',
                   background: 'linear-gradient(145deg, #1a1a1a, #0a0a0a)',
                   borderRadius: '16px',
-                  padding: '2rem 1rem 0',
+                  padding: '1rem',
                   textAlign: 'center',
                   fontFamily: 'Orbitron, sans-serif',
                   fontSize: '0.8rem',
@@ -146,7 +148,9 @@ function CharacterCards() {
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
-                  overflow: 'hidden',
+                  overflow: 'auto',
+                  flex: 1,
+                  minHeight: 0,
                 }}>
                   <div style={{ height: '100%' }}>
                     <CardsModel modelPath={char.path}/>
@@ -185,9 +189,12 @@ function CharacterCards() {
                   fontFamily: 'Orbitron, sans-serif',
                   transform: 'rotateY(180deg)',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
-                  overflow: 'hidden',
+                  overflow: 'auto',
+                  flex: 1,
+                  minHeight: 0,
+                  padding: '1rem',
                 }}>
-                  <div>
+                  <div style={{height: '100%'}}>
                     <h3>{char.name}</h3>
                     <p style={{
                         margin: '0 1.5rem',
