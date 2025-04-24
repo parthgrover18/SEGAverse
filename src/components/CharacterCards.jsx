@@ -90,7 +90,7 @@ function CharacterCards() {
       <div className="character-card-wrapper">
         <div style={{
           maxWidth: '1200px',
-          margin: '0 auto',
+          // margin: '0 auto',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           columnGap: '2rem',
