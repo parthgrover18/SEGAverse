@@ -88,18 +88,18 @@ function CharacterCards() {
             Character Cards
       </h1>
       <div className="character-card-wrapper">
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          columnGap: '2rem',
-          justifyItems: 'center',
-          padding: '2rem',
-          alignItems: 'start',
-          alignContent: 'start',
-          textAlign: 'center'
-        }}>
+      <div style={{
+  maxWidth: '1200px',
+  margin: '0 auto',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  columnGap: '2rem',
+  justifyItems: 'center',
+  padding: '2rem',
+  alignItems: 'start',
+  alignContent: 'start',
+  textAlign: 'center'
+}}>
         {displayedCharacters.map((char, i) => {
           return (
             <div ref={addToCardRefs} className="character-card" key={i} 
