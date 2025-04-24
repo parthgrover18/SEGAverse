@@ -106,14 +106,13 @@ function CharacterCards() {
             style={{
               perspective: '1000px',
               width: '20rem',
-              height: 'auto',
-              display: 'flex',
-              flexDirection: 'column',
+              position: 'relative',
             }}>
               <div style={{
-                position: 'relative',
-                width: '100%',
-                height: 'auto',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
                 transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s',
                 transformStyle: 'preserve-3d',
               transform: flippedIndex === i 
