@@ -42,7 +42,7 @@ function Navbar() {
           alt="Logo"
           style={{
             width: 'clamp(100px, 23vw, 180px)',
-            height: 'clamp(30px, 5vh, 60px)',
+            // height: 'clamp(30px, 5vh, 60px)',
             objectFit: 'contain'
           }}
         />
