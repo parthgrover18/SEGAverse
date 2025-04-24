@@ -151,18 +151,8 @@ function CharacterCards() {
                   overflow: 'auto',
                   flex: 1,
                   minHeight: 0,
-                  maxHeight: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
                 }}>
-                  <div style={{
-                    height: '100%',
-                    overflow: 'auto',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    paddingBottom: '1rem',
-                  }}>
+                  <div style={{ height: '100%' }}>
                     <CardsModel modelPath={char.path}/>
                   </div>
                   <div style={{marginBottom:'2rem'}}>
@@ -191,31 +181,25 @@ function CharacterCards() {
                   backfaceVisibility: 'hidden',
                   background: '#1a1a1a',
                   borderRadius: '16px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  color: '#00aaff',
+                  fontSize: '1.2rem',
+                  fontFamily: 'Orbitron, sans-serif',
                   transform: 'rotateY(180deg)',
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
                   overflow: 'auto',
                   flex: 1,
                   minHeight: 0,
-                  maxHeight: '100%',
                   padding: '1rem',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
                 }}>
-                  <div style={{
-                    height: '100%',
-                    overflow: 'auto',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: '1rem',
-                    textAlign: 'center'
-                  }}>
-                    <h3 style={{ color: '#00aaff', marginBottom: '1rem' }}>{char.name}</h3>
-                    <h4 style={{ color: '#fff', marginBottom: '0.5rem' }}>Fun Fact</h4>
-                    <p style={{ color: '#bbb' }}>{char.funFact}</p>
+                  <div style={{height: '100%'}}>
+                    <h3>{char.name}</h3>
+                    <p style={{
+                        margin: '0 1.5rem',
+                        color:'#bbb'
+                    }} >Fun Fact: {char.funFact}</p>
                   </div>
                 </div>
               </div>
