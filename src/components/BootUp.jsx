@@ -56,7 +56,15 @@ const BootUp = ({ onComplete }) => {
         textAlign: 'center',
       }}>
         <div style={{ minHeight: '1.2em', fontWeight: 'bold', fontSize: '1.5rem' }}>{text}</div>
-        <div style={{ marginTop: '4rem', height: '50px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{
+          marginTop: '4rem',
+          height: '50px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          opacity: showLoader ? 1 : 0,
+          transition: 'opacity 1s ease-in-out'
+        }}>
           {showLoader && <RingLoader color="#00aaff" size={60} />}
         </div>
       </div>
