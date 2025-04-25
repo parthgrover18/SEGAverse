@@ -21,7 +21,7 @@ function HomePage() {
           <Trivia/>
           <Footer/>
         </>
-      //  {/* )} */}
+} */}
     </div>
   )
 }
