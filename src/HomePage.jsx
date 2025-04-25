@@ -11,9 +11,9 @@ function HomePage() {
 
   return (
     <div>
-      {/* {!booted ? (
+      {!booted ? (
         <BootUp onComplete={() => setBooted(true)} />
-       ) : ( */}
+       ) : (
         <>
           <Navbar/>
           <LandingPage />
