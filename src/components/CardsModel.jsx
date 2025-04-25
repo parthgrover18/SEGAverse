@@ -16,21 +16,6 @@ function Model({ modelPath }) {
 
     setScale(uniformScale);
     scene.position.y = (-box.min.y * uniformScale)-0.8;
-    if (modelPath.includes("tails")) {
-      scene.position.y += 1.7;
-    }
-
-    if (modelPath.includes("infinite")) {
-      scene.position.y -= 13.5;
-    }
-
-    if (modelPath.includes("jetHawk")) {
-      scene.position.y += 0.97;
-    }
-
-    if (modelPath.includes("e123Omega")) {
-      scene.position.y += 5;
-    }
 
   }, [scene, modelPath]);
 
